@@ -5,8 +5,53 @@
 //------------------------------
 
 // Put the assignment code here
+#include <iostream>
+
 
 class Quaternion {
+  
+  double a;
+  double b;
+  double c;
+  double d;
+  public:
+  Quaternion(double e, double f, double g, double h )
+  {
+    a=e;
+    b=f;
+    c=g;
+    d=h;
+  }
+   bool operator== (const Quaternion &e)const
+   {
+    if ((e.a == this-> a) && (e.b == this-> b) && (e.c == this-> c) && (e.d == this-> d))
+    return true;
+
+    else
+    return false;
+
+  }
+
+  Quaternion operator+(const Quaternion &e){
+    Quaternion result(a+e.a,b+e.b,c+e.c,d+e.d);
+    return result;
+  
+
+  }
+
+  Quaternion operator-(const Quaternion &e){
+    Quaternion result(a-e.a, b-e.b, c-e.c, d-e.d);
+    return result;
+    
+  }
+  Quaternion operator*(double h){
+    Quaternion result(a*h,b*h,c*h,d*h);
+    return result;
+  
+  }
+ 
+   
+
 };
 
 //------------------------------
