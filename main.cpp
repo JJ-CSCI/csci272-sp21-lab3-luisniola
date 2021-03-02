@@ -7,6 +7,29 @@
 // Put the assignment code here
 
 class Quaternion {
+  public:
+  double a;
+  double b;
+  double c;
+  double d;
+
+  bool operator==(const Quaternion p){}
+
+  Quaternion(double p, double q, double r, double s)
+  {
+    a=p;
+    b=q;
+    c=r;
+    d=s;
+  }
+
+  Quaternion operation+(const Quaternion p)
+  {
+
+  }
+ 
+   
+
 };
 
 //------------------------------
